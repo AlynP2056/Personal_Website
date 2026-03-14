@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Alyn Panggabean - Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alike+Angular&family=Almendra&family=Almendra+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" type="text/javascript"></script>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Welcome to Alyn's portfolio website! You can learn more about me when you open this website!" />
+    <meta name="author" content="Alyn Panggabean" />
+    <meta name="keywords" content="portfolio, mechanical engineer, games, illustrations, photography, design, personal website" />
+
+  </head>
+  
+  <body>
+
+    <nav id="sidebar" class="expanded">
+      <ul class = "links">
+        <li>  <a href="index.html" onclick="closeSidebar(event)"">Home ›</a>    </li>
+        <li>  <a href="about_me.html">About Me ›</a>    </li>
+        <li>  <a href="resume.html">Resume ›</a>        </li>
+        <li>  <a href="works.html">Works ›</a>          </li>
+        <li>  <a href="hobbies.html">Hobbies ›</a>      </li>
+        <li>  <a href="contact.html" class="current">Contact ›</a>      </li>
+      </ul>
+
+      <main>
+        <p> You can reach me via email at alyn@berkeley.edu or you can use the form below to send me a message :)</p>
+        
+        <div class="contact">
+            <h2> Send me a message using this form below! </h2>
+
+            <div class="form">
+              <label for="name"> Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="off" />
+            </div>
+
+            <div class="form">
+              <label for="email"> Email</label>
+              <input type="text" id="email" name="email" placeholder="Your email" autocomplete="off" />
+            </div>
+
+            <div class="form">
+              <label for="msg"> Message </label>
+              <input type="text" id="msgInput" name="msgInput" placeholder="Your message" autocomplete="off" />
+            </div>
+
+            <button class="send" onclick="submit(event)"> Send Message!</button>
+
+            <p class="sent">
+              Thank you for sending me a message! I will get back to you soon!
+            </p>
+
+
+        </div>
+      </main>
+    </nav>
+
+    <div id="card">
+    <h1> Alyn Panggabean </h1>
+    <img
+      src="images/Yosemite-2617.png"
+      alt="my picture"
+      height = "250"
+      class="my-picture"
+    />
+    <h2>Level 21</h2>
+    </div>
+
+  </body>
