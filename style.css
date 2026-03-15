@@ -1,0 +1,183 @@
+h3{ 
+    font-family: "IM Fell English SC"; 
+}
+
+h1, h3, h4, h5, h6 {
+    font-family: "Alike Angular", "Almendra", "Almendra SC";
+}
+
+
+body, h2 {
+    font-family: "IM Fell English";
+}
+
+nav{
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 100vh;
+    background-color: #949494;
+    transition: width 0.6s ease;
+    overflow-x: visible;
+}
+
+nav.expanded {
+    width: calc(100vw - 400px);
+    transition: width 0.6s ease;
+}
+
+.links {
+  position: absolute;
+  right: 103%;  
+  top: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+}
+
+.links a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+  font-family: "IM Fell English SC"
+}
+
+.links a.current {
+    font-size: larger;
+}
+
+main {
+    position: absolute;
+    left: 50px;
+    top:50px;
+    width: calc(100% - 70px);
+    height: calc(100vh - 25px);
+    overflow-y: auto;
+}
+
+main.empty {
+    pointer-events: none;
+}
+
+#card {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    overflow-y: auto;
+    transition: transform 0.6s ease, font-size 0.6s ease, top 0.6s ease;
+}
+
+
+.my-picture {
+    width: 350px;
+    height: auto;
+}
+
+.age {
+    margin-bottom: 30px;
+}
+
+nav.expanded ~ #card {
+    top:-150px;
+    transform: translate(max(calc(-75% - (100vw - 400px) / 2), -80vw), 0) scale(0.5);
+    font-size: 0.9em;
+}
+
+.btn-header {
+    font-size: 1.75em;
+    top: 25px;
+
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 36px;
+}
+
+.btn {
+    font-family: "IM Fell English SC";
+    font-size: 1.3em;
+    padding:10px 30px;
+}
+
+.btn.active {
+    background-color:rgb(51, 49, 76);
+    color: aliceblue;
+}
+
+.grids { 
+    display: none; 
+}
+
+.grids.active { 
+    display: block; 
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    transition: filter 0.2s ease, transform 0.2s ease;
+}
+
+.sent {
+    display: none;
+    font-style: italic;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+.form input, .form textarea {
+    min-height: 30px;
+    width: 500px;
+    resize: vertical;
+}
+
+
+
+.sent {
+    display:none;
+    opacity:0;
+
+}
+
+.sent.visible {
+    display:block;
+    opacity: 1;
+}
+
+#intro {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    right: calc(50% + 200px);
+    max-width: 200px;
+    text-align: right;
+    word-wrap:break-word;
+    overflow: hidden;
+    transition: transform 0.6s ease
+}
+
+nav.expanded ~ #intro {
+    opacity:0;
+}
